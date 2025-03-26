@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="Design.PageContainerWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Design"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="PageContainerWindow">
+    <NavigationView x:Name="Navigation" PaneDisplayMode="Top" Loaded="OnWindowLoaded">
+        <NavigationView.MenuItems>
+            <NavigationViewItem Content="Home" Tag="home"/>
+            <NavigationViewItem Content="Page 1" Tag="page1"/>
+        </NavigationView.MenuItems>
+        <ScrollViewer>
+            <Frame x:Name="pagesFrame"/>
+        </ScrollViewer>
+    </NavigationView>
+</Window>
